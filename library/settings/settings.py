@@ -41,7 +41,6 @@ INTERNAL_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
-    'django_filters',
     'drf_spectacular',
     'rest_framework_simplejwt',
 ]
@@ -144,5 +143,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_FILTER_BACKENDS': ['rest_framework.filters.SearchFilter']
 }
