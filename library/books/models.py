@@ -23,7 +23,14 @@ class Book(models.Model):
     publisher = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
-        return self.title
+        return f'{self.title} - {self.authors.to_title()}'
+
+
+class AuthorQuerySet(models.QuerySet):
+
+    def to_title(self):
+        return ', '.join(self.values_list('name', flat=True))
+
 
 class Author(models.Model):
 
@@ -35,6 +42,8 @@ class Author(models.Model):
     gender = models.CharField(max_length=100)
     image = models.ImageField(upload_to="authors/", blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+
+    objects = AuthorQuerySet.as_manager()
 
     def __str__(self):
         return self.name
