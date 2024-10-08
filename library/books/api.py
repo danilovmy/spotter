@@ -9,8 +9,7 @@ class BookViewSet(viewsets.ModelViewSet):
     http_method_names = [name for name in viewsets.ModelViewSet.http_method_names if name != 'patch']
     serializer_class = BookSerializer
     queryset = BookSerializer.queryset()
-    # filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['title', 'authors', 'year', 'description', 'isbn', 'language', 'rating', 'publication_date', 'book_format', 'image', 'publisher']
+    filterset_fields = ['title', 'authors__name'] # 'year', 'description', 'isbn', 'language', 'rating', 'publication_date', 'book_format', 'publisher'
     permission_classes = [IsAuthenticatedOrReadOnly]
 
 
@@ -18,6 +17,5 @@ class AuthorViewSet(viewsets.ModelViewSet):
     http_method_names = [name for name in viewsets.ModelViewSet.http_method_names if name != 'patch']
     serializer_class = AuthorSerializer
     queryset = AuthorSerializer.queryset()
-    # filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['name', 'gender', 'image', 'description']
+    filterset_fields = ['name']  # 'gender', 'description'
     permission_classes = [IsAuthenticatedOrReadOnly]
