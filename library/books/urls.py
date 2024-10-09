@@ -20,5 +20,7 @@ from books import api
 router = routers.SimpleRouter()
 router.register('books', api.BookViewSet, basename='books')
 router.register('authors', api.AuthorViewSet, basename='authors')
+router.register('user/favorites', api.FavoriteViewSet, basename='favorites')
+
 
 urlpatterns = router.urls

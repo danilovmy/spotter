@@ -48,7 +48,6 @@ THIRD_PARTY_APPS = [
 PROJECT_APPS = [
     'books',
     'accounts',
-    'wishes',
 ]
 
 INSTALLED_APPS = INTERNAL_APPS + THIRD_PARTY_APPS + PROJECT_APPS

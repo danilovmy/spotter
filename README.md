@@ -5,7 +5,7 @@ Assessment Django Developer -- Data Science focus by Spotter
 Create a Django RESTful API to manage books and authors, including user authentication, search functionality, and recommendation system.
 
 * ✓ Requirements:
-1. API Endpoints:
+✓ 1. API Endpoints:
     -Books:
         ✓  GET /books - Retrieve a list of all books.
         ✓  GET /books/:id - Retrieve a specific book by ID.
@@ -20,25 +20,25 @@ Create a Django RESTful API to manage books and authors, including user authenti
         ✓ PUT /authors/:id - Update an existing author (protected).
         ✓ DELETE /authors/:id - Delete an author (protected).
 
-2. Authentication:
+✓ 2. Authentication:
     ✓ Use JWT for user authentication.
     ✓ Implement registration (POST /register) and login (POST /login) endpoints.
     ✓ Protect endpoints for creating, updating, and deleting books/authors.
 
 
-3. Database Schema:
+✓ 3. Database Schema:
 	✓ Design a relational database schema with tables for books,        authors, users and any other model you need.
 
-4. Search Functionality:
-	*Implement search functionality to find books by title or author name (GET /books?search=query).
+✓ 4. Search Functionality:
+	✓ Implement search functionality to find books by title or author name (GET /books?search=query).
 
 5. Recommendation System
 Now that you have built your library models and allow the user to lookup any book, it is time to build a "suggested books" endpoint.
-	*User can add/remove a book from their favorites list
-    *As a user marks a favorite book, the system should provide the user with a list of 5 recommended titles.
+	✓ User can add/remove a book from their favorites list
+    ✓ As a user marks a favorite book, the system should provide the user with a list of 5 recommended titles.
     *You are welcome to use a similarity algorithm for determining recommended titles.
     *Each new favorites addition should recommend titles that are similar to the entire favorites list.
-    *Max of 20 favorite book titles.
+    ✓ Max of 20 favorite book titles.
     *Endpoint should return favorites in less than 1 second.
 
 
